@@ -1,0 +1,137 @@
+:root {
+  --bg: #0f172a;
+  --surface: #111827;
+  --card: #1f2937;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #22c55e;
+  --danger: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: linear-gradient(180deg, var(--bg), #020617);
+  color: var(--text);
+}
+
+.topbar {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #334155;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: rgba(2, 6, 23, 0.95);
+  backdrop-filter: blur(4px);
+}
+
+.container {
+  max-width: 980px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: rgba(31, 41, 55, 0.92);
+  border: 1px solid #374151;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.row.between {
+  justify-content: space-between;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+  border-radius: 10px;
+  border: 1px solid #4b5563;
+  padding: 0.65rem 0.75rem;
+}
+
+input,
+textarea {
+  background: #111827;
+  color: var(--text);
+}
+
+button {
+  cursor: pointer;
+  background: var(--accent);
+  color: #052e16;
+  border: none;
+  font-weight: 700;
+}
+
+button.ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid #4b5563;
+}
+
+.muted {
+  color: var(--muted);
+  margin-top: -0.35rem;
+}
+
+.message {
+  min-height: 1.25rem;
+  color: #86efac;
+}
+
+.message.error {
+  color: #fca5a5;
+}
+
+.results {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.brewery-card,
+.review-card {
+  border: 1px solid #374151;
+  border-radius: 10px;
+  padding: 0.75rem;
+  background: #111827;
+}
+
+.brewery-card h4 {
+  margin: 0 0 0.35rem 0;
+}
+
+.brewery-card .meta,
+.review-card .meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.detail p {
+  margin: 0.45rem 0;
+}
+
+a {
+  color: #93c5fd;
+}
