@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brewery Review System</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>🍺 Brewery Review System</h1>
+      <div id="authInfo" class="auth-info"></div>
+    </header>
+
+    <main class="container">
+      <section id="authSection" class="card">
+        <h2>Login / Signup</h2>
+        <p class="muted">Create an account or login to post reviews.</p>
+        <form id="authForm" class="grid">
+          <input id="email" type="email" placeholder="Email" required />
+          <input id="password" type="password" placeholder="Password" required minlength="6" />
+          <div class="row">
+            <button type="button" id="signupBtn">Sign up</button>
+            <button type="button" id="loginBtn">Login</button>
+            <button type="button" id="logoutBtn" class="ghost" hidden>Logout</button>
+          </div>
+        </form>
+        <p id="authMessage" class="message"></p>
+      </section>
+
+      <section id="searchSection" class="card">
+        <h2>Search Breweries</h2>
+        <p class="muted">Use one or more filters: city, name, type.</p>
+        <form id="searchForm" class="grid">
+          <input id="by_city" placeholder="Search by city" />
+          <input id="by_name" placeholder="Search by brewery name" />
+          <input id="by_type" placeholder="Search by brewery type (micro, brewpub...)" />
+          <button type="submit">Search</button>
+        </form>
+        <p id="searchMessage" class="message"></p>
+        <div id="results" class="results"></div>
+      </section>
+
+      <section id="breweryDetailSection" class="card" hidden>
+        <div class="row between">
+          <h2>Brewery Details</h2>
+          <button id="backToResultsBtn" class="ghost">← Back to results</button>
+        </div>
+        <div id="breweryDetail" class="detail"></div>
+
+        <h3>Reviews</h3>
+        <div id="reviewsList" class="reviews"></div>
+
+        <h3>Add / Update Your Review</h3>
+        <form id="reviewForm" class="grid">
+          <label>
+            Rating (1-5)
+            <input id="rating" type="number" min="1" max="5" required />
+          </label>
+          <label>
+            Description
+            <textarea id="description" rows="4" placeholder="Share your experience" required></textarea>
+          </label>
+          <button type="submit">Save review</button>
+        </form>
+        <p id="reviewMessage" class="message"></p>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
